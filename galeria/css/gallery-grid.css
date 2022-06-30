@@ -1,4 +1,5 @@
 body { font: normal 16px sans-serif; padding: 0; margin: 0; }
+.center{ width: 90%; margin: auto;}
 
 .top_cabecera{
     background-image: url(../images/linea.png);
@@ -13,11 +14,19 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
 }
 .letrasCabecera { margin-right: 30px; }
 .letrasCabecera a{ color: #ccc; text-decoration: none;}
-
 .top-area {width: 100%; display: flex; flex-direction: column; align-items: center; }
 .top-area .nav{width: 100%; padding: 6px 0; background-color: #082a5e; color: #fff;}
-
 .nav .button{width: 90%; margin: auto;}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* BOTON dropdown */
 .dropbtn {
     background-color: #082a5e;
     color: white;
@@ -32,7 +41,6 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
 }
 .dropbtn a{ color: white; text-decoration: none; }
 .dropbtn:hover a{ color: #FFCD00; background-color: rgba(255,255,255,0.2);}
-
 .dropbtn .triangulo {
     margin-left: 6px;
     width: 0; 
@@ -43,20 +51,21 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
 }
   
 .dropbtn:hover, .dropbtn:focus {
-    color: #FFCD00;
-    background-color: rgba(255,255,255,0.2);
+    color: #FFCD00; background-color: rgba(255,255,255,0.2);
 }
-
 .dropdown { position: relative; display: inline-block; }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 220px;
+    min-width: 240px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1; 
+    height: 100%;
+    min-height: 65vh;
+    overflow-x: scroll;
 }
   
 .dropdown-content a {
@@ -69,8 +78,7 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
 .dropdown a:hover {background-color: #1954ac; color:#fff;}
 .show {display: block;}
 
-.center{ width: 90%; margin: auto;}
-
+/* GALERIA lightbox */
 .gallery-container .box-image {width: 100%; display: flex; justify-content: center;}
 
 .tz-gallery {
@@ -94,7 +102,6 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
     min-height: 220px;
     object-fit: cover;
 }
-
 
 .tz-gallery .lightbox img:hover {
     transform: scale(1.05);
@@ -120,6 +127,7 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
     }
 }
 
+/* REPORTE DE ACTIVIDADES */
 .reporting-container .title{ color: #FFCD00; text-align: center; font-size: 30px;}
 
 .inner-reporting{ padding: 40px; margin-bottom: 30px;
@@ -154,6 +162,20 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
 
 /* scroll to top */
 .scrollup{
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  width:32px;
+    height:32px;
+  background-color: #FFCD02;
+  color: #ffffff;
+  border-radius: 2px;
+  font-weight: 900;
+  /* padding: 8px; */
+  /* cursor: pointer; */
+  z-index: 20;
+}
+/* .scrollup{
     position:fixed;
 	width:32px;
 	height:32px;
@@ -162,10 +184,10 @@ body { font: normal 16px sans-serif; padding: 0; margin: 0; }
 	background: #FFCD02; 
     font-weight: 900;
     text-decoration: none;
--webkit-border-radius: 2px 2px 0 0;	
+    -webkit-border-radius: 2px 2px 0 0;	
 	-moz-border-radius: 2px 2px 0 0;	
 	border-radius:  2px 2px 0 0;	
-}
+} */
 
 a.scrollup {
 	outline:0;
