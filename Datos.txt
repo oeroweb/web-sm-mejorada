@@ -6,3 +6,10 @@ ps: $94&F2uHrwdK8J
 Cuentas FTP:
 User: stella01@ieism.edu.pe
 ps: $94&F2uHrwdK8J
+
+Correos:
+User: superadmin@ieism.edu.pe
+ps: Anno2022$
+
+User: system@ieism.edu.pe
+ps: AnnO@2022$
