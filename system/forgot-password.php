@@ -1,12 +1,5 @@
-<?php require_once "controllerUserData.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Forgot Password</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php require_once "controller/controllerUserData.php"; ?>
+<?php require "layout/header.php"; ?>
 <body>
     <div class="container">
         <div class="row">

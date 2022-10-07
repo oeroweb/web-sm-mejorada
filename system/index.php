@@ -1,18 +1,12 @@
-<?php require_once "controllerUserData.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php require_once "controller/controllerUserData.php"; ?>
+<?php require "layout/header.php"; ?>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4 form login-form">
                 <form action="index.php" method="POST" autocomplete="">
-                    <h2 class="text-center">SISTEMA DE GESTIÓN</h2>
+                    <h2 class="text-center">PORTAL DE GESTIÓN</h2>
                     <p class="text-center">Ingresa tu correo y contraseña</p>
                     <?php
                     if(count($errors) > 0){

@@ -1,4 +1,4 @@
-<?php require_once "controllerUserData.php"; ?>
+<?php require_once "controller/controllerUserData.php"; ?>
 <?php 
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
@@ -22,23 +22,18 @@ if($email != false && $password != false){
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title><?php echo $fetch_info['name'] ?> | Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-    nav{
-        padding-left: 100px!important;
-        padding-right: 100px!important;
-        background: #6665ee;
-        font-family: 'Poppins', sans-serif;
-    } 
+    
     nav a.navbar-brand{
-        color: #fff;
-        font-size: 30px!important;
-        font-weight: 500;
+      color: #fff;
+      font-size: 30px!important;
+      font-weight: 500;
     }
     button a{
         color: #6665ee;
@@ -47,24 +42,18 @@ if($email != false && $password != false){
     button a:hover{
         text-decoration: none;
     }
-    h1{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        font-size: 50px;
-        font-weight: 600;
-    }
+    
     </style>
 </head>
 <body>
-    <nav class="navbar">
-    <a class="navbar-brand" href="#">Brand name</a>
-    <button type="button" class="btn btn-light"><a href="logout-user.php">Logout</a></button>
-    </nav>
-    <h1>Welcome <?php echo $fetch_info['name'] ?></h1>
+  <nav class="navbar fixed-top navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Portal IEISM</a>
+    <div class="d-flex align-items-center">
+      <p class="px-2 my-0 text-white fw-light">Hola;<br> <span class="fw-bold"><?php echo $fetch_info['name'] ?></span></p>
+      <button type="button" class="btn btn-light"><a href="logout-user.php">Logout</a></button>
+    </div>
+  </nav>
+    
     
 </body>
 </html>

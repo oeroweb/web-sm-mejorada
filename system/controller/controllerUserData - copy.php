@@ -20,12 +20,15 @@ if(isset($_POST['signup'])){
         $errors['email'] = "El correo electrónico que ha ingresado ya existe!";
     }
     if(count($errors) === 0){
-        $encpass = password_hash($password, PASSWORD_BCRYPT);
+        $encpass = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);       
+        
         $code = rand(999999, 111111);
         $status = "notverified";
         $insert_data = "INSERT INTO usertable (name, email, password, code, status)
                         values('$name', '$email', '$encpass', '$code', '$status')";
         $data_check = mysqli_query($con, $insert_data);
+        var_dump($data_check);
+        die();
         if($data_check){
             $subject = "Código de verificación de correo electrónico";
             $message = "Su código de verificación es $code";

@@ -62,4 +62,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
-INSERT INTO `usertable`(`name`, `email`, `password`, `code`, `status`) VALUES ('Super Admin','superadmin@ieism.edu.pe','AnnO@2022$',1234,'verified')
+-- INSERT INTO `usertable`(`name`, `email`, `password`, `code`, `status`) VALUES ('Super Admin','superadmin@ieism.edu.pe','AnnO@2022$',1234,'verified')
