@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #082a5e;
+  color: #ffffff;
+}
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.navbar .navbar-menu .navbar-brand {
+  font-size: 30px;
+  color: #ffffff;
+  margin-right: 16px;
+}
+.navbar .navbar-menu .navbar-nav {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+.navbar .navbar-menu .navbar-nav .nav-item {
+  list-style: none;
+  padding: 10px 16px;
+}
+.navbar .navbar-menu .navbar-nav .nav-item .nav-link {
+  color: inherit;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transition: all 0.5ms;
+}
+.navbar .navbar-menu .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+.navbar .navbar-menu .navbar-nav .nav-item .active {
+  text-decoration: underline;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.navbar .navbar-secion {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-secion .name-secion {
+  text-align: right;
+  font-weight: 300;
+  margin-right: 8px;
+}
+.navbar .navbar-secion .btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #082a5e;
+  transition: all 0.5ms;
+}
+.navbar .navbar-secion .btn:hover {
+  background-color: #082a5e;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
