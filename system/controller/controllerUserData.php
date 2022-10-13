@@ -7,6 +7,7 @@ $errors = array();
 
 //if user signup button
 if(isset($_POST['signup'])){
+    $_SESSION['info'] = "";
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
@@ -27,7 +28,9 @@ if(isset($_POST['signup'])){
         $data_check = mysqli_query($con, $insert_data);        
         
         if($data_check){
-            header('location: home.php');            
+            header('location: home.php');
+            $info = "Su cuenta fue registrada con exito.";
+            $_SESSION['info'] = $info; 
         }else{
             $errors['db-error'] = "Error al insertar datos!";
         }
@@ -83,7 +86,7 @@ if(isset($_POST['login'])){
                 header('location: user-otp.php');
             }            
         }else{
-            $errors['email'] = "Contraseña incorrectos!";
+            $errors['email'] = "Contraseña incorrecta!";
         }
     }else{
         $errors['email'] = "Al parecer aún no estas registrado! Haga clic en el enlace inferior para registrarse!";

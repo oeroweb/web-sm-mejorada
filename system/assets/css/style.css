@@ -1,53 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-html,body{
-    background: #6665ee;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
-::selection{
-    color: #fff;
-    background: #6665ee;
+
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+html, body {
+  font-family: "Poppins", sans-serif;
 }
-.container .form{
-    background: #fff;
-    padding: 30px 35px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #082a5e;
+  color: #ffffff;
 }
-.container .form form .form-control{
-    height: 40px;
-    font-size: 15px;
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }
-.container .form form .forget-pass{
-    margin: -15px 0 15px 0;
+.navbar .navbar-menu .navbar-brand {
+  font-size: 30px;
+  color: #ffffff;
+  margin-right: 16px;
 }
-.container .form form .forget-pass a{
-   font-size: 15px;
+.navbar .navbar-menu .navbar-nav {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }
-.container .form form .button{
-    background: #6665ee;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+.navbar .navbar-menu .navbar-nav .nav-item {
+  list-style: none;
+  padding: 10px 16px;
 }
-.container .form form .button:hover{
-    background: #5757d1;
+.navbar .navbar-menu .navbar-nav .nav-item .nav-link {
+  color: inherit;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transition: all 0.5ms;
 }
-.container .form form .link{
-    padding: 5px 0;
+.navbar .navbar-menu .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  font-weight: 700;
 }
-.container .form form .link a{
-    color: #6665ee;
+.navbar .navbar-menu .navbar-nav .nav-item .active {
+  text-decoration: underline;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-.container .login-form form p{
-    font-size: 14px;
+.navbar .navbar-secion {
+  display: flex;
+  align-items: center;
 }
-.container .row .alert{
-    font-size: 14px;
+.navbar .navbar-secion .name-secion {
+  text-align: right;
+  font-weight: 300;
+  margin-right: 8px;
 }
+.navbar .navbar-secion .btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #082a5e;
+  transition: all 0.5ms;
+}
+.navbar .navbar-secion .btn:hover {
+  background-color: #082a5e;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */

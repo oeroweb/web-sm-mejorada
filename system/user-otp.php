@@ -1,11 +1,90 @@
-<?php require_once "controller/controllerUserData.php"; ?>
 <?php 
-$email = $_SESSION['email'];
-if($email == false){
-  header('Location: index.php');
-}
+    require_once "controller/controllerUserData.php";
+    $email = $_SESSION['email'];    
+    if($email != false ){
+        $sql = "SELECT * FROM usertable WHERE email = '$email'";
+        $run_Sql = mysqli_query($con, $sql);
+        if($run_Sql){
+            $fetch_info = mysqli_fetch_assoc($run_Sql);
+            // print_r($fetch_info);
+            $status = $fetch_info['status'];
+            $code = $fetch_info['code'];
+            if($status == "verified"){
+                if($code != 0){              
+                header('Location: reset-code.php');
+                }else{
+                header('Location: home.php');
+                }              
+            }else{
+                header('Location: user-otp.php');
+            }
+        }
+    }else{
+        header('Location: index.php');
+    }
 ?>
-<?php require "layout/header.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        html,body{
+            background: #6665ee;
+            font-family: 'Poppins', sans-serif;
+        }
+        ::selection{
+            color: #fff;
+            background: #6665ee;
+        }
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container .form{
+            background: #fff;
+            padding: 30px 35px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .container .form form .form-control{
+            height: 40px;
+            font-size: 15px;
+        }
+        .container .form form .forget-pass{
+            margin: -15px 0 15px 0;
+        }
+        .container .form form .forget-pass a{
+        font-size: 15px;
+        }
+        .container .form form .button{
+            background: #6665ee;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .container .form form .button:hover{
+            background: #5757d1;
+        }
+        .container .form form .link{
+            padding: 5px 0;
+        }
+        .container .form form .link a{
+            color: #6665ee;
+        }
+        .container .login-form form p{
+            font-size: 14px;
+        }
+        .container .row .alert{
+            font-size: 14px;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <div class="row">

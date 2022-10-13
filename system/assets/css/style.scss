@@ -1,0 +1,31 @@
+$crblanco : #ffffff;
+$crazulfuerte: #082a5e;
+$cramarillo: #ffcd00;
+$crazul: #1954ac;
+
+*{ margin: 0; padding: 0;}
+a{font-family: 'Poppins', sans-serif; text-decoration: none;}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+html,body{    
+  font-family: 'Poppins', sans-serif;
+}
+.navbar{ padding: 20px; display: flex; justify-content: space-between; align-items: center; background-color: $crazulfuerte; color: $crblanco;
+  .navbar-menu{ display: flex; align-items: center; color: $crblanco;
+    .navbar-brand{font-size: 30px; color: $crblanco; margin-right: 16px;}
+    .navbar-nav{ display: flex; align-items: center; color: $crblanco;
+      .nav-item{list-style: none; padding: 10px 16px;
+        .nav-link{color: inherit; font-weight: 300; letter-spacing: 0.5px; transition: all 0.5ms;
+          &:hover{text-decoration: underline; font-weight: 700; }
+        }
+        .active{text-decoration: underline; font-weight: 700; letter-spacing: 1px;}
+      }
+    }
+  }
+  .navbar-secion{display: flex; align-items: center;
+    .name-secion{text-align: right; font-weight: 300; margin-right: 8px;}
+    .btn{padding: 10px 20px; border-radius: 6px; border: 1px solid $crblanco; background-color: $crblanco; color: $crazulfuerte; transition: all 0.5ms;
+      &:hover{background-color: $crazulfuerte; color: $crblanco;}
+    }
+  }
+}
