@@ -9,6 +9,21 @@ a {
   text-decoration: none;
 }
 
+ul li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 90vh;
+}
+
 html, body {
   font-family: "Poppins", sans-serif;
 }
@@ -65,7 +80,7 @@ html, body {
   margin-right: 8px;
 }
 .navbar .navbar-secion .btn {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 6px;
   border: 1px solid #ffffff;
   background-color: #ffffff;
@@ -75,4 +90,27 @@ html, body {
 .navbar .navbar-secion .btn:hover {
   background-color: #082a5e;
   color: #ffffff;
+}
+
+.storeproduct .aside {
+  padding: 20px 10px;
+  background-color: #082a5e;
+  color: #ffffff;
+  border-top: 1px solid #f2f2f2;
+}
+.storeproduct .aside .list {
+  padding-left: 16px;
+  padding-top: 30px;
+}
+.storeproduct .aside .list .item-list {
+  height: 30px;
+}
+.storeproduct .aside .list .item-list a {
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 24px;
+}
+.storeproduct .container-product {
+  padding: 20px;
+  background-color: #f2f2f2;
 }/*# sourceMappingURL=style.css.map */

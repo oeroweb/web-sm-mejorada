@@ -26,7 +26,22 @@
 ?>
 <body>
   <?php require "layout/navbar.php"; ?>
-  <h1>HOME DASHBOARD</h1>
+  <div class="grid-container storeproduct">
+    <div class="aside">
+      <h2>Almacen de Productos</h2>
+      <ul class="list">
+        <li class="item-list">
+          <a href="">Listar Productos</a>  
+        </li>
+        <li class="item-list">
+          <a href="">Registrar Productos</a> 
+        </li>
+      </ul>
+    </div>
+    <div class="container-product">
+      <h2>Registro de Productos</h2>
+    </div>
+  </div>
     
 </body>
 </html>
