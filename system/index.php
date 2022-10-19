@@ -74,6 +74,15 @@
                 <form action="index.php" method="POST" autocomplete="">
                     <h2 class="text-center">PORTAL DE GESTIÓN</h2>
                     <p class="text-center">Ingresa tu correo y contraseña</p>
+                    <?php 
+                    if(isset($_SESSION['info'])){
+                        ?>
+                        <div class="alert alert-success text-center">
+                            <?php echo $_SESSION['info']; ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
                     <?php
                     if(count($errors) > 0){
                         ?>

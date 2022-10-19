@@ -54,6 +54,7 @@ if(isset($_POST['check'])){
         if($update_res){
             $_SESSION['name'] = $name;
             $_SESSION['email'] = $email;
+            $_SESSION['info'] = "Su codigo se valido correctamente, inicia sesion nuevamente.";
             header('location: home.php');
             exit();
         }else{
