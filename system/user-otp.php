@@ -6,7 +6,7 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Signup Form</title>
@@ -22,10 +22,10 @@
             background: #6665ee;
         }
         .container{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            display:flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
         }
         .container .form{
             background: #fff;
@@ -70,7 +70,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 offset-md-4 form">
+            <div class=" form">
                 <form action="user-otp.php" method="POST" autocomplete="off">
                     <h2 class="text-center">Código de Verificación</h2>
                     <?php 

@@ -15,3 +15,4 @@
       <a class="btn" href="logout-user.php">Salir</a>
     </div> 
 </nav>
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion -->
