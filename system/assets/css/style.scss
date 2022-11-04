@@ -1,35 +1,82 @@
 $crblanco : #ffffff;
-$crazulfuerte: #082a5e;
+$crazulfuerte: #0d2b59;
 $cramarillo: #ffcd00;
 $crazul: #1954ac;
+$crazullight: #4d8ae6;
 
 *{ margin: 0; padding: 0;}
 a{font-family: 'Poppins', sans-serif; text-decoration: none;}
 ul li{list-style: none;}
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+html,body{    
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
 .container{display: flex; flex-wrap: wrap}
 .grid-container{
   display: grid;    
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 240px 1fr;
   min-height: 90vh;
+  height: 100%;
   // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-html,body{    
-  font-family: 'Poppins', sans-serif;
+/**************************************
+***            LOADER             ****
+***************************************/
+.loader{
+  display:flex; align-items: center; justify-content: center; height: 100vh; z-index:200; background: #fff;
 }
+.preloader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  //border: 10px solid $crverde;
+  //border-top: 10px solid $cramarillolight;
+
+  background: linear-gradient(45deg, transparent, transparent 40%, $cramarillo);
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.preloader:before{
+  content:'';
+  position: absolute;
+  top:6px; left:6px; right:6px; bottom:6px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 100;
+}
+.preloader:after{
+  content:'';
+  position: absolute;
+  top:0px; left:0px; right:0px; bottom:0px;
+  background: #fff;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, $cramarillo);
+  z-index: 100;
+  z-index: 1;
+  filter: blur(10px);
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
 .navbar{ padding: 20px; display: flex; justify-content: space-between; align-items: center; background-color: $crazulfuerte; color: $crblanco; 
   .navbar-menu{ display: flex; align-items: center; color: $crblanco;
-    .navbar-brand{font-size: 30px; color: $crblanco; margin-right: 16px;}
-    .navbar-nav{ display: flex; align-items: center; color: $crblanco;
-      .nav-item{list-style: none; padding: 10px 16px;
-        .nav-link{color: inherit; font-weight: 300; letter-spacing: 0.5px; transition: all 0.5ms;
-          &:hover{text-decoration: underline; font-weight: 700; }
-        }
-        .active{text-decoration: underline; font-weight: 700; letter-spacing: 1px;}
-      }
-    }
+    .navbar-brand{font-size: 30px; color: $crblanco; margin-right: 16px;}    
   }
   .navbar-secion{display: flex; align-items: center;
     .name-secion{text-align: right; font-weight: 300; margin-right: 8px;}
@@ -39,13 +86,23 @@ html,body{
   }
 }
 
-.storeproduct{
-  .aside{padding: 20px 10px; background-color: #082a5e; color: $crblanco; border-top: 1px solid #f2f2f2;
-    .list{padding-left: 16px; padding-top: 30px;
-      .item-list{height: 30px;
-        a{color: $crblanco; font-weight: 400; line-height: 24px;}
-      } 
-    }
+.aside{ background-color: $crazulfuerte; color: $crblanco; border-top: 1px solid #f2f2f2;  
+  .list{ padding-top: 1px;
+    .item-list{ display: flex; flex-wrap: wrap; align-items: center; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.5); background-color: $crazul; cursor: pointer;
+      .material-symbols-outlined{padding-left: 10px;}
+      .icon-img{width: 28px; padding-left: 10px;}
+      a{display: flex; padding: 16px; color: $crblanco; font-weight: 400; line-height: 24px; width: calc(100% - 71px);}
+      .sublist{ background-color: $crazullight; width: 100%; 
+        .item-sublist{ display: flex; flex-wrap: wrap; align-items: center; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.5);
+          .material-symbols-outlined{padding-left: 20px;}
+          a{ padding: 12px; font-weight: 300; }
+        }  
+      }  
+    } 
+    .active{text-decoration: underline; font-weight: 700; letter-spacing: 1px;}
   }
+}
+
+.storeproduct{  
   .container-product{padding: 20px; background-color: #f2f2f2;}
 }

@@ -8,7 +8,7 @@
   <div class="grid-container storeproduct">
     <?php require "layout/aside.php"; ?>
     <div class="container-product">
-      <h2>Listado de Productos</h2>
+      <h2>Registrar de Producto</h2>
     </div>
   </div>
     

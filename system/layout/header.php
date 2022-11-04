@@ -8,5 +8,15 @@
     <meta name="author" content="Oscar Rojas">
     <title>Portal - IEI Stella Maris</title>
     <link href="../images/ico_escudo.png" rel="shortcut icon"/>   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+</style>
