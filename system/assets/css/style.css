@@ -13,6 +13,34 @@ ul li {
   list-style: none;
 }
 
+.mg-auto {
+  margin: auto;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w80 {
+  width: 80%;
+}
+
+.w30 {
+  width: 30%;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.w10 {
+  width: 10%;
+}
+
+.al-ct {
+  text-align: center;
+}
+
 html, body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;

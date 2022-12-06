@@ -41,16 +41,16 @@
         </div>
       <?php endif; ?> 
 
-      <div class="box-tabla">
-        <table id="dt_listaProductos" class="hover w100">
+      <div class="box-tabla w80 mg-auto">
+        <table id="dt_usuarios" class="hover w100">
           <thead>
             <tr>						
-              <th class="al-ct">id</th>
-              <th class="">Producto</th>							
-              <th class="">EMAIL</th>							
-              <th class="">NOMBRES</th>
+              <th class="al-ct w10">id</th>
+              <th class="w30">Usuario</th>							
+              <th class="w30">Correo</th>
+              <th class="w20">Perfil</th>
               <?php if($usuarioPerfil <= '2'): ?>
-                <th class="al-ct">Opciones</th>
+                <th class="al-ct w10">Opciones</th>
               <?php endif; ?>
             </tr>	
           </thead>
@@ -68,7 +68,7 @@
     });
 
     var listar = function(){
-      var table = $("#dt_listaProductos").DataTable({
+      var table = $("#dt_usuarios").DataTable({
         "dom": 'Bfrtip',
         "buttons": [
           'excel', 'pdf'
@@ -83,7 +83,15 @@
           {"data":"id"},
           {"data":"name"},					
           {"data":"email"},
-          {"data":"name"}
+          {"data":"perfil",
+            render: function(data){
+              if( data == 1)
+              {data = "<span>Super Admin</span>"}
+              else if (data == 2)
+              {data = "<span>Usuario </span>"}
+              return data;
+            }
+          }
           <?php if($usuarioPerfil <= '2'): ?>
           ,
           {"defaultContent": "<a class='editar btn-2 btn-azul' title='Editar'><span class='material-symbols-outlined'>edit</span></a><?php if($usuarioPerfil <= '1'): ?><a class='eliminar btn-2 btn-rojo' title='Borrar'><span class='material-symbols-outlined'>delete</span></a><?php endif; ?>"}	

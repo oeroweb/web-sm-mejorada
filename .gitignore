@@ -2,6 +2,7 @@ bodybg
 cgi-bin
 documentos
 comunicados
+Datos.txt
 galeria/images
 galeria/reportes
 galeria/Antiguos
@@ -9,6 +10,6 @@ galeria/js
 modelo fotos.psd
 actividades
 system/system-login
-system/DB
+system/DB/
 system/controller/connection.php
 system/controller/controllerUserData - copy.php

@@ -71,15 +71,16 @@ if(isset($_POST['login'])){
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $check_email = "SELECT * FROM usertable WHERE email = '$email'";
     $res = mysqli_query($con, $check_email);
-    if(mysqli_num_rows($res) > 0){
+    if(mysqli_num_rows($res) > 0){        
         $fetch = mysqli_fetch_assoc($res);
         $fetch_pass = $fetch['password'];
+        $_SESSION['session_sm'] = $fetch;                 
         if($fetch_pass == $password){
             $_SESSION['email'] = $email;
             $status = $fetch['status'];
             if($status == 'verified'){
                 $_SESSION['email'] = $email;
-                $_SESSION['password'] = $password;
+                $_SESSION['password'] = $password;                
                 header('location: home.php');
             }else{
                 $info = "El correo - $email, no está verificado aún!, solicita tu código de acceso al administrador del sistema.";
