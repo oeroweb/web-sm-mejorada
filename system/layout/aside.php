@@ -25,8 +25,7 @@
           </span>
           <a href="register-product.php">Resgitrar Producto</a>  
         </li>
-      </ul>  
-
+      </ul>
     </li>
   </ul>  
 </div>

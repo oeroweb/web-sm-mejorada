@@ -1,0 +1,1 @@
+<script src="../assets/js/datatables.min.js"></script>

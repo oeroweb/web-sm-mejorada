@@ -27,7 +27,8 @@ html,body{
 ***            LOADER             ****
 ***************************************/
 .loader{
-  display:flex; align-items: center; justify-content: center; height: 100vh; z-index:200; background: #fff;
+  display:flex; align-items: center; justify-content: center;
+  height: 100vh; z-index:200; background: #fff;
 }
 .preloader {
   width: 70px;
@@ -36,13 +37,13 @@ html,body{
 
   //border: 10px solid $crverde;
   //border-top: 10px solid $cramarillolight;
-
   background: linear-gradient(45deg, transparent, transparent 40%, $cramarillo);
   animation-name: girar;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 .preloader:before{
   content:'';
   position: absolute;
@@ -51,6 +52,7 @@ html,body{
   border-radius: 50%;
   z-index: 100;
 }
+
 .preloader:after{
   content:'';
   position: absolute;
@@ -58,8 +60,7 @@ html,body{
   background: #fff;
   border-radius: 50%;
   background: linear-gradient(45deg, transparent, transparent 40%, $cramarillo);
-  z-index: 100;
-  z-index: 1;
+  z-index: 100;  
   filter: blur(10px);
 }
 
@@ -74,6 +75,7 @@ html,body{
   }
 }
 
+// NAVBAR
 .navbar{ padding: 20px; display: flex; justify-content: space-between; align-items: center; background-color: $crazulfuerte; color: $crblanco; 
   .navbar-menu{ display: flex; align-items: center; color: $crblanco;
     .navbar-brand{font-size: 30px; color: $crblanco; margin-right: 16px;}    
@@ -86,6 +88,7 @@ html,body{
   }
 }
 
+// ASIDE
 .aside{ background-color: $crazulfuerte; color: $crblanco; border-top: 1px solid #f2f2f2;  
   .list{ padding-top: 1px;
     .item-list{ display: flex; flex-wrap: wrap; align-items: center; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.5); background-color: $crazul; cursor: pointer;
@@ -103,6 +106,29 @@ html,body{
   }
 }
 
+// PRODUCTOS
 .storeproduct{  
-  .container-product{padding: 20px; background-color: #f2f2f2;}
+  .container-product{padding: 20px; background-color: #f2f2f2;
+    .box-breadcrumbs{ display: flex; align-items: center; font-size: 13px; color: $crazullight;
+      margin-bottom: 14px;
+      .btn-link{display: flex; align-items: center; transition: all 0.5ms; padding:0 8px;
+        span{font-size: 13px;}
+        &:hover{font-weight: 500;}
+      }      
+    }
+    .box-title{ display: flex; align-items: center; justify-content: space-between;
+    }
+    .box-form{ margin:10px 0px; background-color: #fff; border-radius: 6px; padding: 20px; width: 70%; box-shadow: 0px 0px 2px rgba(0,0,255,0.5);
+      .box-input{ margin-bottom: 8px;
+        label{font-weight: 700; line-height: 28px; width: 100%;}
+        input, select{padding: 10px 14px; border:1px solid #d9d9d9; border-radius: 6px; outline: none; width: 220px;}
+      }
+      .box-buttons{ display: flex; align-items: center; 
+        button{padding:10px 14px; border-radius:6px; outline: none; border:1px solid #8c8c8c; display: flex; align-items: center; margin: 0 6px;
+          span{margin-right: 8px;}
+        }
+        
+      }
+    }
+  }
 }

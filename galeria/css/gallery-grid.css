@@ -4,6 +4,7 @@ body {
   font: normal 16px sans-serif;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 .center {
   width: 90%;
@@ -128,6 +129,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
 .tz-gallery {
@@ -320,3 +322,66 @@ a.scrollup i:hover {
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
+
+/**************************************
+***            LOADER             ****
+***************************************/
+.loader{
+  display:flex; align-items: center; justify-content: center;
+  height: 100vh; z-index:200; background-image: linear-gradient(
+    to top,
+    #ecedee 0%,
+    #eceeef 75%,
+    #e7e8e9 100%
+  );
+}
+.preloader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  /* border: 10px solid $crverde; */
+  /* border-top: 10px solid $cramarillolight; */
+
+  background: linear-gradient(45deg, transparent, transparent 40%, #ffcd00);
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.preloader:before{
+  content:'';
+  position: absolute;
+  top:6px; left:6px; right:6px; bottom:6px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  z-index: 100;
+}
+.preloader:after{
+  content:'';
+  position: absolute;
+  top:0px; left:0px; right:0px; bottom:0px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #ffcd00);
+  z-index: 100;  
+  filter: blur(10px);
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+.galery24-row{display: none;}
+.galery23-row{display: none;}
+.galery22-row{display: none;}
+.galery21-row{display: none;}
+.galery20-row{display: none;}
+
