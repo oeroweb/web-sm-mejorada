@@ -27,5 +27,11 @@
         </li>
       </ul>
     </li>
+    <li class="item-list">
+      <span class="material-symbols-outlined">
+      manage_accounts
+      </span>      
+      <a href="list-user.php">Usuarios</a> 
+    </li>
   </ul>  
 </div>

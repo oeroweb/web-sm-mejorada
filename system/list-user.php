@@ -41,7 +41,7 @@
         </div>
       <?php endif; ?> 
 
-      <div class="box-tabla w80 mg-auto">
+      <div class="box-tabla">
         <table id="dt_usuarios" class="hover w100">
           <thead>
             <tr>						
