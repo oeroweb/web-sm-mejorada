@@ -25,7 +25,7 @@
       </div>
 
       <div class="box-title">
-        <h2>Registrar de Ingreso o Salida</h2>        
+        <h2>Registro de Ingreso o Salida de Productos</h2>        
       </div>
       <div class="box-form">
         <p>Estamos trabajando para brindarte una mejor experiencia</p>
