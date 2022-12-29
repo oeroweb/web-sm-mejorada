@@ -21,9 +21,15 @@
         </li>
         <li class="item-sublist">
           <span class="material-symbols-outlined">
-            add_circle
+            add_shopping_cart
           </span>
-          <a href="register-product.php">Resgitrar Producto</a>  
+          <a href="create-product.php">Crear Producto</a>  
+        </li>
+        <li class="item-sublist">
+          <span class="material-symbols-outlined">
+            shopping_cart_checkout
+          </span>
+          <a href="manager-product.php">Resgitrar Movimiento</a>  
         </li>
       </ul>
     </li>

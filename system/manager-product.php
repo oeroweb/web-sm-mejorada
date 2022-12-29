@@ -25,10 +25,11 @@
       </div>
 
       <div class="box-title">
-        <h2>Registrar de Producto</h2>        
+        <h2>Registrar de Ingreso o Salida</h2>        
       </div>
       <div class="box-form">
-        <form action="">
+        <p>Estamos trabajando para brindarte una mejor experiencia</p>
+        <!-- <form action="">
           <div class="box-input">
             <label for="">Almacen</label>
             <select class="" name="almacen" id="almacen" required>
@@ -46,28 +47,27 @@
           </div>
           <div class="box-input">
             <label for="">Código</label>
-            <input type="text" placeholder="Ingresa un código de producto">
+            <input type="text" name="codigo" placeholder="Ingresa un código">
           </div>
           <div class="box-input">
             <label for="">Nombre de Producto</label>
-            <input type="text" placeholder="Ingresa un producto">
+            <input type="text" name="nombre" placeholder="Ingresa un nombre" required>
           </div>          
           <div class="box-input" >
             <label for="">Marca</label>
-            <input type="text" placeholder="ingresar una marca">
-          </div>
-          
-          <div class="box-input" >
-            <label for="">Fecha de Ingreso</label>
-            <input type="date" placeholder="ingresar una marca" value="<?=date('Y-m-d')?>">
+            <input type="text" name="marca" placeholder="ingresar una marca">
           </div>
           <div class="box-input" >
             <label for="">Cantidad</label>
-            <input type="number" min="0" placeholder="ingresar una marca">
+            <input type="number" name="cantidad" min="0" placeholder="ingresar una cantidad">
+          </div>          
+          <div class="box-input" >
+            <label for="">Fecha de Ingreso</label>
+            <input type="date" placeholder="ingresar una marca" value="<?=date('Y-m-d')?>" required>
           </div>
           <div class="box-input">
             <label for="">Unidad de Medida</label>
-            <select name="almacen" id="">
+            <select name="medida" id="" required>
               <option value="">Selecciona una medida</option>
               <?php 
                 $datos = selectalldatos($con, 'medidatable');
@@ -94,7 +94,7 @@
               Cancelar
             </button>
           </div>
-        </form>
+        </form> -->
       </div>
     </div>
   </div>

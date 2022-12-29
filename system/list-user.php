@@ -20,14 +20,14 @@
           Atras
         </a>
         | Productos /
-        <a href="#" class="btn-link"> Lista de Productos  
+        <a href="#" class="btn-link"> Lista de Usuarios  
           <span class="material-symbols-outlined">
             subdirectory_arrow_left
           </span>
         </a>        
       </div>
       <div class="box-title">
-        <h2>Listado de Productos</h2>
+        <h2>Listado de Usuarios</h2>
       </div>
       <div id="info"></div>
 
@@ -77,7 +77,7 @@
         "destroy":true,
         "ajax":{
           'method':'POST',
-          'url':'models/productos.php'
+          'url':'models/search/users.php'
         },
         "columns":[
           {"data":"id"},
@@ -94,7 +94,7 @@
           }
           <?php if($usuarioPerfil <= '2'): ?>
           ,
-          {"defaultContent": "<a class='editar btn-2 btn-azul' title='Editar'><span class='material-symbols-outlined'>edit</span></a><?php if($usuarioPerfil <= '1'): ?><a class='eliminar btn-2 btn-rojo' title='Borrar'><span class='material-symbols-outlined'>delete</span></a><?php endif; ?>"}	
+          {"defaultContent": "<a class='editar btn-clear' title='Editar'><span class='material-symbols-outlined'>edit</span></a><?php if($usuarioPerfil <= '1'): ?><a class='eliminar btn-clear' title='Borrar'><span class='material-symbols-outlined'>delete</span></a><?php endif; ?>"}	
 				  <?php endif; ?>	
         ],
         "language": idioma_espanol,

@@ -29,6 +29,10 @@ ul li {
   width: 80%;
 }
 
+.w50 {
+  width: 50%;
+}
+
 .w30 {
   width: 30%;
 }
@@ -41,8 +45,30 @@ ul li {
   width: 10%;
 }
 
+.min-w100 {
+  min-width: 100%;
+}
+
 .al-ct {
   text-align: center;
+}
+
+.alerta-exito {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.alerta-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 10px 0;
 }
 
 html, body {
@@ -232,6 +258,26 @@ html, body {
   letter-spacing: 1px;
 }
 
+.storeproduct .btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+.storeproduct .btn span {
+  margin: 0 4px;
+}
+.storeproduct .btn-clear {
+  margin: 0px 6px;
+}
+.storeproduct .btn-azul {
+  color: #ffffff;
+  background-color: #1954ac;
+  transition: all 0.5s linear;
+}
+.storeproduct .btn-azul:hover {
+  background-color: #0d2b59;
+}
 .storeproduct .container-product {
   padding: 20px;
   background-color: #f2f2f2;
@@ -305,4 +351,10 @@ html, body {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   padding: 16px;
+}
+.storeproduct .container-product .box-tabla table {
+  min-width: 100%;
+}
+.storeproduct .container-product .box-tabla table.dataTable tbody td {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

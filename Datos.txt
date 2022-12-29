@@ -13,3 +13,9 @@ ps: Anno2022$
 
 User: system@ieism.edu.pe
 ps: AnnO@2022$
+
+**********************************************************************
+Portal de Gestion
+User: superadmin@ieism.edu.pe
+ps: Anno2022
+

@@ -12,11 +12,30 @@ ul li{list-style: none;}
 .w100{width: 100%}
 .w90{width: 90%}
 .w80{width: 80%}
+.w50{width: 50%}
 .w30{width: 30%}
 .w20{width: 20%}
 .w10{width: 10%}
-
+.min-w100{min-width: 100%;}
 .al-ct{text-align: center}
+
+.alerta-exito{
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.alerta-error{
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
 
@@ -117,7 +136,14 @@ html,body{
 }
 
 // PRODUCTOS
-.storeproduct{  
+.storeproduct{
+  .btn{ padding: 10px 16px; border-radius: 6px; display:flex; align-items: center; 
+    span{ margin: 0 4px;}
+  }
+  .btn-clear{margin: 0px 6px;  }
+  .btn-azul{color: $crblanco; background-color: $crazul; transition: all .5s linear;
+    &:hover{background-color: $crazulfuerte;}
+  }
   .container-product{padding: 20px; background-color: #f2f2f2;
     .box-breadcrumbs{ display: flex; align-items: center; font-size: 13px; color: $crazullight;
       margin-bottom: 14px;
@@ -126,8 +152,7 @@ html,body{
         &:hover{font-weight: 500;}
       }      
     }
-    .box-title{ display: flex; align-items: center; justify-content: space-between;
-    }
+    .box-title{ display: flex; align-items: center; justify-content: space-between; }
     .box-form{ margin:10px 0px; background-color: #fff; border-radius: 6px; padding: 20px; width: 70%; box-shadow: 0px 0px 2px rgba(0,0,255,0.5);
       .box-input{ margin-bottom: 8px;
         label{font-weight: 700; line-height: 28px; width: 100%;}
@@ -136,12 +161,13 @@ html,body{
       .box-buttons{ display: flex; align-items: center; 
         button{padding:10px 14px; border-radius:6px; outline: none; border:1px solid #8c8c8c; display: flex; align-items: center; margin: 0 6px;
           span{margin-right: 8px;}
-        }
-        
+        }        
       }
     }
     .box-tabla{ margin: 20px 0;
       background-color: $crblanco; box-shadow: 0px 0px 2px rgba(0,0,0,0.5); border-radius: 4px; padding: 16px;
+      table{min-width: 100%;}
+      table.dataTable tbody td{text-align: center;}
     }
   }
 }

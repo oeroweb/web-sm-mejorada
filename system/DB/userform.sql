@@ -33,7 +33,8 @@ CREATE TABLE `usertable` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `code` mediumint(50) NOT NULL,
-  `status` text NOT NULL
+  `status` text NOT NULL, 
+  `perfil` int(3) not null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -136,6 +137,7 @@ CREATE TABLE PRODUCTOS (
   marca varchar(255) NULL,
   stock int(11) not null DEFAULT '1',   
   fechacreacion date not null,
+  estado int(3) not null,
   CONSTRAINT pk_medida PRIMARY KEY(id),
   CONSTRAINT fk_almacen FOREIGN KEY(almacen_id) REFERENCES almacentable(id),
   CONSTRAINT fk_medidatable FOREIGN KEY(medidatable_id) REFERENCES medidatable (id)
@@ -152,6 +154,7 @@ CREATE TABLE PRODUCTOS_DETALLES (
   fechaingreso date null,
   fechasalida date null,
   fechamovimiento date not null,
+  estado int(3) not null DEFAULT '1',
   CONSTRAINT pk_productoDetalles PRIMARY KEY(id),
   CONSTRAINT fk_movimiento FOREIGN KEY(tipoMovimiento_id) REFERENCES tipomovimiento (id),
   CONSTRAINT fk_area FOREIGN KEY(area_id) REFERENCES area (id),
